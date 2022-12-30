@@ -21,10 +21,9 @@ A: A content delivery network (CDN) refers to a geographically distributed group
 
 Q: Why is React known as React?
 
-A: React is a JavaScript-based UI development library. Facebook and an open-source developer community run it.
- React makes it painless to create interactive UIs. Design simple views for each state in your application, and 
- React will efficiently update and render just the right components when your data changes. Declarative
- views make your code more predictable and easier to debug.
+A: React was developed for applications (Facebook) that have constantly changing data. 
+Since React is a front-end framework or the “View” in MVC, this means that as the user clicks around and 
+changes the app’s data, the view should “react” or change with those user events. User events being mouse clicks, typing, submitting a form..
 
 Q: What is crossorigin in script tag?
 
