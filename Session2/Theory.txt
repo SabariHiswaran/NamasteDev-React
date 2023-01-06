@@ -1,0 +1,149 @@
+
+What is NPM?
+	
+NPM manages the code packages.
+
+NPM is the world's largest Software Library (Registry). NPM is also a software Package Manager and Installer
+
+The registry contains over 800,000 code packages.
+
+npm install - command should run in our react app for the configuration and it will create package.json file which contains all configs in json format.
+
+Note : NPM not Stands for Node Package Manager . It does not have full form.
+
+--------------------------------------------------------------------------------------------------------------
+
+What is `Parcel/Webpack`? Why do we need it?
+
+Parcel, webpack and vite are bundlers. Bundlers are needed to produce the production build ready code by minifying, cleaning and doing many things...
+A bundler is a development tool that combines many JavaScript code files into a single one that is production-ready loadable in the browser.
+Bundling is the process of following imported files and merging them into a single file: a “bundle”.
+This bundle can then be included on a webpage to load an entire app at once.
+
+----------------------------------------------------------------------------------------------------------------
+
+What is `.parcel-cache`?
+
+parcel cache is loads into the project folder when the build command runs. Parcel needs some space for itself to do their work. It creates this parcel
+cache which will cache our project and beacuse of that when there are any changes in the app files and new build is created, it will take lesser time to 
+create the build. This is because of parcel cache.
+
+Official Docs:
+If you restart the dev server, Parcel will only rebuild files that have changed since the last time it ran. Parcel automatically tracks all of the files, configuration,
+ plugins, and dev dependencies that are involved in your build, and granularly invalidates the cache when something changes
+
+-----------------------------------------------------------------------------------------------------------------
+
+What is `npx` ?
+
+If we are typing npx in terminal then it means we are telling to "EXECUTE" the command.
+
+It comes with the npm, when you installed npm above 5.2.0 version then automatically npx will installed.
+It is an npm package runner that can execute any package that you want from the npm registry without even installing that package.
+
+-----------------------------------------------------------------------------------------------------------------
+
+What is difference between `dependencies` vs `devDependencies`?
+
+dependencies are global. If we install any packages without "-D" then it means that we need that package in both dev and prod.
+
+devDependencies are only for development environment and package should be installed with command "-D". Eg : npm install -D parcel 
+We can use -dev flag, if you are installing packages you will use during development.
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+What is Tree Shaking?
+
+In production builds, Parcel statically analyzes the imports and exports of each module, and removes everything that isn't used. This is called "tree shaking" or "dead code elimination".
+Tree shaking is supported for both static and dynamic import(), CommonJS and ES modules, and even across languages with CSS modules.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+What is Hot Module Replacement?
+
+Hot Module Replacement (HMR) is keep track of files and once there was any changes then it will automatically run build in quicker way.
+
+Official DOCs:
+As you make changes to your code, Parcel automatically rebuilds the changed files and updates your app in the browser.
+By default, Parcel fully reloads the page, but in some cases it may perform Hot Module Replacement
+(HMR). HMR improves the development experience by updating modules in the browser
+at runtime without needing a whole page refresh. This means that application state can be retained as you change small things in your code.
+
+------------------------------------------------------------------------------------------------------------------------
+
+ List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
+
+ 
+ => Minifying the code - When build is created, parcel minify the code. 
+ => Compatible with older version of browser - Using the browserlist, we can run the code in older versions of browsers as well.
+ => console log cleared - All the console logs in every file will be removed
+ => Hot Module Replacement - With use of HMR we dont need to refresh the page and it will keep track of files and whenever anything changes
+  it will automatically updates the modules in browser
+ => cacheing while development - Due to cacheing development build takes less time to build subsequent changes of the files.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+What is `.gitignore`? What should we add and not add into it?
+
+gitignore file contains the folders that will be getting ignored while pushing our code to Github.
+
+we should add the specific folders into gitignore which can be regenerated in the server . For eg: node-modules folder can be created in
+server so it not needed to be pushed in git.
+
+we should not add the folders into gitignore which cannot be regenerated in the server. So it should be pushed to the github.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+What is the difference between `package.json` and `package-lock.json`?
+
+package.json is the file which will be contain all the configuration details including dependencies,devDependencies and their version. It will
+be added when we run the command npm init.
+
+package.lock.json is the file which has all the dependencies and devDependencies with the current locked version that is running in production.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Why should I not modify `package-lock.json`?
+
+Its purpose is to track the entire tree of dependencies (including dependencies of dependencies) and the exact version of each dependency.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+What is `node_modules` ? Is it a good idea to push that on git?
+
+As the name states, it is a folder which contains modules(packages) that are used in the react app.
+
+It is not good idea to push that on git since it is big in size and also it can be regenerated in server.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+What is the `dist` folder?
+
+dist folder is the one which contains the minified code. It is the "build" that created after running the command npx parcel index.html(entrypoint)
+
+---
+The dist folder contains the output of Parcel and the content of that folder is served by the web server.
+--------------------------------------------------------------------------------------------------------------------------------
+
+What is `browserlists`?
+
+browserlists is used to run our react app in the older versions of browser also. It can be configured under package.json file. There we need to mentione the version of browser
+that we need to run.
+
+https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Read about dif bundlers: vite, webpack, parcel 
+
+Read about: ^ - caret and ~ - tilda 
+ 
+~version “Approximately equivalent to version”, will update you to all future patch versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <= 1.2.9.
+
+^version “Compatible with version”, will update you to all future minor/patch versions, without incrementing the major version. ^2.3.4 will use releases from 2.3.4 to <= 2.9.9.
+
+Read about Script types in html (MDN Docs)
+
