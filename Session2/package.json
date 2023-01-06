@@ -1,0 +1,30 @@
+{
+  "name": "session2",
+  "version": "1.0.0",
+  "description": "React COurse",
+ 
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliverSabari/NamasteDev-React.git"
+  },
+  "author": "Sabari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OliverSabari/NamasteDev-React/issues"
+  },
+  "homepage": "https://github.com/OliverSabari/NamasteDev-React#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "browserslist" :[
+    "last 2 versions"
+  ] 
+}
