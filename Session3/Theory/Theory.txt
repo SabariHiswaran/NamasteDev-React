@@ -1,0 +1,118 @@
+
+JSX
+
+JSX is called as Javascript XML by most of them however there is no official confirmation on its full form. 
+
+JSX is built by FB developers and it is mainly used to include the HTML like syntax inside Javascript file.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+React.createElement  vs JSX
+
+React.createElement function takes parameters and returns object then it will render in DOM.
+
+JSX returns React ELements (React.createELement) and react.createlement returns objects => render in DOM
+
+
+Example to create h1 tag:
+
+Using React.createElement :
+---------------------
+React.createElement("h1",{id : "heading1"} , Hello World)
+
+Using JSX :
+----------
+<h1 id="heading1">Hello World </h1>
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Benefits of JSX
+
+
+Due to JSX we can write easy and readible HTML inside javascript file itself as we don't need to use React.createelement each time to create html tag.
+
+JSX also allows React to show more useful error and warning messages.
+
+Faster than normal JavaScript as it performs optimizations while translating to regular JavaScript.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Behind the scenes of JSX
+
+JSX => React.createEement => object => HTML(DOM)
+
+JSX returns react elements. React element returns objects and those objects will be rendered in DOM as HTML 
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Babel and parcel role in JSX
+
+Babel is the one which will go through each line of code and find the JSX. Once it finds the JSX , babel will create the abstract syntax tree and convert the JSX into the React Element.
+
+babel comes along with the installation of parcel. It is madatory to have Babel if we need to use JSX.
+
+Babel only understands the JSX.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Components
+
+Everything in webpage is components in react. We can built resuable codes using Components and also it helps to seperate each and every functionality of webpage which provides easy way to
+ divide the code and it is easy to troubleshoot.
+
+Two types of Component => Class Component and Functional Component 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Functional Components
+
+Functional components is normal JavaScript function and it returns the React element using JSX. Functional Components can be called like below,
+
+<App />(recommended Way ) or App()
+
+We can pass props (properties) which is nothing but parameters to these functional component.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+     Composing Components 
+
+Using another component inside component is known as Composing Components.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+What is JSX ?
+
+JSX is syntax extension to JavaScript. It is used to structure Components in webpage. It is similar in appearance as HTMl.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Superpowers of JSX :
+
+JSX helps to structure and logic of webpage in same file.
+
+JSX also helps us to prevent from any attacks when we are fetching any data and putting it inside JSX.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Role of type attribute in script tag ? What options can i use there ?
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+{TitleComponent} vs {<TitleComponent /> } vs {<TitleComponent>  </TitleComponent>}
+
+{TitleComponent}
+
+TitleComponent here is known as variable. Here this will print the value of this variable.
+
+{<TitleComponent /> }
+
+Here TitleComponent component will be called.
+
+{<TitleComponent>  </TitleComponent>}
+
+
+
+
+
+
