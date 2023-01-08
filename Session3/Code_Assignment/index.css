@@ -1,0 +1,16 @@
+.headerdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+.logoimage{
+    width: 100px;
+    height: 100px;
+}
+
+input[type = text]{
+    width: 250px;
+    height: 30px;
+}

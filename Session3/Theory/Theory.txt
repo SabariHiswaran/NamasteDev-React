@@ -107,11 +107,14 @@ TitleComponent here is known as variable. Here this will print the value of this
 
 {<TitleComponent /> }
 
-Here TitleComponent component will be called.
+Here TitleComponent component will be called. Self closing tag.
 
 {<TitleComponent>  </TitleComponent>}
 
+It is same as calling TitleComponent. In addition to that if we add some code in between these tags then it is considered as children of TitleComponent
+and it can be accessed by props.children.
 
+------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
