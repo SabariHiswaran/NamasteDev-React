@@ -2,11 +2,10 @@
   "name": "react-assignment",
   "version": "1.0.0",
   "description": "React COurse",
- 
   "scripts": {
     "test": "jest",
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -19,14 +18,20 @@
   },
   "homepage": "https://github.com/OliverSabari/NamasteDev-React#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "bootstrap": "^5.2.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "parcel": "^2.8.2",
     "process": "^0.11.10"
   },
-  "browserslist" :[
+  "browserslist": [
     "last 2 versions"
-  ] 
+  ]
 }

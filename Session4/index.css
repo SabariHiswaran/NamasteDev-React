@@ -1,0 +1,70 @@
+.alignNavBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    margin-right: auto;
+   
+}
+
+.listOfNavs{
+    display: flex;
+    margin: 0 !important;
+}
+
+.listOfNavs > li {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.listOfNavs > li:hover{
+    color: #FF6263;
+    cursor: pointer;
+}
+
+
+/* -----------------Offers -------------------- */
+
+
+.offerImage{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.offerImage > img {
+  margin-top: 40px;
+}
+
+
+/* ------------------Body------------------------- */
+
+.cardImg{
+    width: 100%;
+}
+
+.cuisinesStyle{
+    font-size: 12px;
+}
+
+.ratingStyle{
+    font-size: 12px;
+}
+
+.discountInfo {
+    color: brown;
+    font-size: 14px;
+}
+
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.restaurant-list > .card {
+    margin:20px 30px;
+}
