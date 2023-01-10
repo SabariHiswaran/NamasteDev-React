@@ -38,32 +38,71 @@ which helps us to prevent to add unwanted div's or any tags as parent. As JSX ex
 -------------------------------------------------------------------------------------------------------------------------
 What is virtual DOm ?
 
+Virtual DOM is the representation of DOM. This is not React, virtual DOM is software engineering concept. React uses this concept, that is why React is fast.
+Virtual DOM is the tree contains nodes which represents the original DOM. It finds the specific place in tree whenever the changes are occured and then using this
+ information Real DOM will be updated.
 -------------------------------------------------------------------------------------------------------------------------
-
-
 
 what is reconcialation in react?
 
+The algorithm React uses to diff one tree with another to determine which parts of DOM need to be changed.
+
+Official DOcs:
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, representation of a UI is 
+kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
 
 -------------------------------------------------------------------------------------------------------------------------
 what is react fiber?
 
-
+official DOCs:
+Fiber is the new reconciliation engine in React 16. Its main goal is to enable incremental rendering of the virtual DOM.
 -------------------------------------------------------------------------------------------------------------------------
 Why we need keys in react ? WHen do we need keys in react?
 
+if we have a list of items inside li and then it is dynamic, whenever new data added react confuses which is new Data so it end up with rerendering whole list.
+To avoid this we can provide key for each list uniquely. So, next time when new data added React will exactly know which list was added newly and it will
+add only that element and avoid rerending whole list.
+
+eg:
+<ul>
+  <li key="2015">Duke</li>
+  <li key="2016">Villanova</li>
+</ul>
+New list 
+<ul>
+  <li key="2014">Connecticut</li>
+  <li key="2015">Duke</li>
+  <li key="2016">Villanova</li>
+</ul>
+
+Now react know key 2014 is newly added and it will render only that list element
 
 -------------------------------------------------------------------------------------------------------------------------
 Can we use index(map index) as the keys in Reacts?
 
+We can use index as keys but its not recommended. As if the list of items has been reordered then it will cause the issue. 
 
+Reference : https://youtu.be/xlPxnc5uUPQ
+
+We can use index as key on these certain condisitons:
+
+i> the list and items are static–they are not computed and do not change;
+ii> the items in the list have no ids;
+iii> the list is never reordered or filtered.
 -------------------------------------------------------------------------------------------------------------------------
 What is props in react?
 
+Props are known as properties. Its nothing but like a normal parameter which we can pass to the components while calling it and then use it.
+
+When we pass any props to components, it will be stored in object and passed as parameter. So, inside component we can access it like props.abc or 
+destructure the props on the fly like {abc} then we can simple call it as abc instead of props.abc.
 
 -------------------------------------------------------------------------------------------------------------------------
-what is config driven UI ?
+what is config driven UI ?(Plus point in system design interview)
 
+Making our UI as dynamic is know as Config Driven UI. In the real world application, we should control our UI with config. Config comes from the backend API.
 
+So, whenever the config changes as per the data provided by backend API, our application also will be displayed based on that config.
 
+Everything is driven by the config in UI.
 -------------------------------------------------------------------------------------------------------------------------
