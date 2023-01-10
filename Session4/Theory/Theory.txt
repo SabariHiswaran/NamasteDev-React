@@ -104,5 +104,5 @@ Making our UI as dynamic is know as Config Driven UI. In the real world applicat
 
 So, whenever the config changes as per the data provided by backend API, our application also will be displayed based on that config.
 
-Everything is driven by the config in UI.
+Everything is driven by the config in UI
 -------------------------------------------------------------------------------------------------------------------------
