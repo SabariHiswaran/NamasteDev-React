@@ -75,3 +75,18 @@
 .restaurant-list > .card {
     margin:20px 30px;
 }
+
+
+/* ------------------------Footer ----------------------- */
+
+.footerStyle{
+    display: flex;
+   justify-content: space-between;
+ 
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}

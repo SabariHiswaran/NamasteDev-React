@@ -1,0 +1,54 @@
+
+What is difference between named Export ,Default export and * as export?
+
+named Export -
+ we need to use curly braces for importing the named export. 
+import {Header} from './'
+
+default export - 
+suppose if we have more than one function need to be exported we can export one function by default and another one as named export.
+For default export no need to use curly braces. import Header from "../"
+
+* as export - 
+In one file if we have exported multiple function then we can import as * and give it a name. Later on whenever needed we can call with that name.
+
+For eg : import {* as Components} from "./"  To call it =>  Components.Header or Components.Footer
+
+---------------------------------------------------------------------------------------------
+
+what is the importance of config.js file?
+
+Suppose we have hardcoded value which we need to access across the multiple components then we can keep those data in one config file. Then whenever we
+needed , it can be accesseed by importing the data from config file.
+
+------------------------------------------------------------------------------------------
+
+
+What are React Hooks?
+
+React Hooks are like normal functions. It was written by fb devs and it can be accessed from React. 
+external docs:
+React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component.
+ Hooks can be stateful and can manage side-effects.
+ React provides a bunch of standard in-built hooks: useState : To manage states. Returns a stateful value and an updater function to update it.
+-----------------------------------------------------------------------------------------
+
+Why do we need a useState Hooks?
+
+React is a one way data-binding. Suppose we need the data that user is typing in text box, the input text will not provide the value to local variable.
+So, react has its own local state variable which can be used by useState. This is to acheive the two way data binding. Now we can implement onclick function
+and each time we can set the react local state variable so that it will be two way data binding.
+
+One way data binding
+
+here only one way is there from variabe to input 
+
+const/let name = "abc"
+<input type ..... value = name />  
+
+Two way data binding
+
+we need to use React local state variable and onchange to update that variable on each user event
+
+const [text, setText] = useState()
+input type ... value = {text} onchange(() => ())
