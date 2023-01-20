@@ -1,0 +1,153 @@
+
+what is microservice ?
+
+Microservices is an architecture for building application with several smaller applications instead of single big application.
+
+These smaller application are communicated as api with other applications, which makes it a little bit slower compared to monolith applications.
+
+In this way we can build and scale the application. It will not break the entire application if there is any problems in any one of the services.
+
+people can work independently as all the services are in seperate places.
+
+------------------------------------------------------------------------------------------------------------------
+
+what is a monolith architecture?
+
+Monolith is an architecture for builing application with everything in a single place. Building the various 
+services into one big single application is know as monolith architecture.
+
+Advantage is that monolith applications are faster as there is no need of api to communicate with various services as everything is present under single app.
+
+Disadvantage is that it is difficult to maintain and scale the app.
+
+------------------------------------------------------------------------------------------------------------------
+
+what is the difference between monolith and microservice ?
+
+A monolithic application is built as a single unified unit while a microservices architecture is a collection of smaller, independently deployable service.
+
+In Microservices, if you make changes in a single data model, it does not affect others. In Monolithic Architecture, any changes 
+in the data model affect the entire database.
+
+Due to its bulky size and higher dependencies, build and deploy mechanisms in monoliths are more complicated and time-consuming.
+Microservices are less resource-sensitive and are built to scale. 
+Since the modules are decoupled from each other, it is easier to build and deploy.
+------------------------------------------------------------------------------------------------------------------
+why do we need a useEffect hook?
+
+Useeffect hook can handle the side effects of the app that cannot be handled by react. There are few things that react cannot take charge like calling an api, localstorage etc....
+
+So, useEffect hook can be used to handle any side effects. Useeffect will run after render method and it will 
+always run based on the dependency array that has been given in second parameter.
+
+loading page => API call (300ms) => rendering the page (500ms)
+
+Instead of the above using the useEffect functionality provided by react we can do below step
+
+loading page => rendering the page (100ms) => API call (300ms) => updating the UI
+
+------------------------------------------------------------------------------------------------------------------
+What is optional Chaining?
+
+Suppose if the data we are trying to access is not present inside the program or calling an api and accessing some particular data in that api which is not present after
+some point of time then our application will crash with some error. So, to avoid this we can use optional chaining which will avoid exwecuting the full programing if the data is not present and\
+this will not crash our app.
+
+console.log(person?.data?.name)  //If this data is not present then it will print undefined instead of throwing error.
+
+------------------------------------------------------------------------------------------------------------------
+what is shimmer UI ?
+
+Shimmer UI is the ui which can be displayed during the time of api call. Because while calling the data from api , it will take some time to render that in page so during that time
+instead of keeping the ui in white screen we can implement the shimmer UI which will enhance the user experience.
+
+SHimmer UI will just display the design of the card/data that is going to be present once data is received from server.
+
+------------------------------------------------------------------------------------------------------------------
+what is the difference between JS expression and JS statement?
+
+JS statement 
+
+Statements are individual instructions that runtime will execute:
+
+let x; // declare a variable 'x'
+
+function foo() {} // declare a function 'foo'
+
+function bar() {
+  return null // return is also a statement
+}
+--------------
+JS expression
+
+Expression returns (expresses) a value:
+
+1 + 2 // expresses 3
+"foo".toUpperCase() // expresses 'FOO'
+5 // this is a literal that expresses number 5
+-----------
+
+Some statements are also expressions:
+
+x = 1; // assignment statement returns right side value
+
+------------------------------------------------------------------------------------------------------------------
+What is conditional Rendering ? Explain with code.
+
+As the name states, it will render the specified code conditionally. Based on the given condition and its result , this will render particular peice of code.
+
+Eg: ternary and AND operator
+
+const a = true;
+
+ternary
+
+a ? "a is true" : "a is false"
+
+AND 
+
+a && "some paragraph"
+
+------------------------------------------------------------------------------------------------------------------
+what is cors?
+
+If one web app need to communicate with another web app then they need to follow cors mechanism. Cors mechanism is comes into pitcure
+whenever one webapp / origin from one domain tries to communicate with another origin/domain.
+
+If one domain sent request to another domain then browser makes the preflight call and ask that another domain whether we can accept the
+request or not. Then another domain will send response which is option call with some additional HTTP headers which contains 
+response whether it can be allowed or not to the browser. SO, repsonse came to browser then it will decide whether the communcation can be made or not.
+
+NOTE : Not every request browser makes preflight call. There are some simple request which  browser allows without cors mechanism.
+
+NOTE : Many of them will use CORS plugin to bypass this browser cors security to make the communication from some localhost to realworld websites api.
+
+offical expl:
+
+Cross-origin resource sharing is a mechanism that allows restricted resources on a web page to be requested from 
+another domain outside the domain from which the
+ first resource was served. A web page may freely embed cross-origin images, stylesheets, scripts, iframes, and videos
+
+------------------------------------------------------------------------------------------------------------------
+what is async and await?
+
+async and await is just a syntactical sugar of promises code. We can run the function asyncronously using the async and await function.
+
+Suppose if we need to make an api call then we can use promises or async. When js sees async function keyword , it will just leave the function and 
+executes the other peices of code. Inside async function we can use await keyword which will wait at that particular line of code till the data comes from api 
+and then it will execute the next line inside the function.
+
+eg:
+ async function () {
+    const response = await normalfunc()
+    const processedResponse = await anotherfunc(response)
+ }
+
+------------------------------------------------------------------------------------------------------------------
+what is the use of const json= await data.json() in getRestaurants()?
+
+Promise will be returned which will have the readable stream and to convert this readable stream into json we need to await for it to happen.
+Here we are awaiting to convert the data that whatever(Promises) we have received from api to JSON. So it will wait until data is converted to json.
+
+
+------------------------------------------------------------------------------------------------------------------
