@@ -12,7 +12,8 @@ const RestaurantCard = (
         avgRating,
         slaString,
         costForTwoString,
-        aggregatedDiscountInfo
+        aggregatedDiscountInfo,
+        promoted
     }
     ) => {
 
@@ -20,7 +21,7 @@ const RestaurantCard = (
 
 
         <Card style={{ width: '260px' , border: "none" }}>
-
+            
             <Card.Img
                 className="cardImg"
                 variant="top"
@@ -28,6 +29,8 @@ const RestaurantCard = (
                 // src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${RES_IMAGE_URL}`}
                 alt="SShyderabad"
             />
+
+           { promoted ? <div className="promoted-div"> PROMOTED </div> : null }
 
             <Card.Body>
                 <Card.Title>
@@ -40,9 +43,9 @@ const RestaurantCard = (
 
                     <div className="ratingStyle" style={{ display: "flex", justifyContent: "space-between " }}>
 
-                        <span>
-                            <FontAwesomeIcon icon="star" />
-                            {avgRating}
+                        <span className={ avgRating >= 4.0 ? "rating-green" : "rating-orange"}>
+                            <FontAwesomeIcon icon="star" className="rating-star" />
+                           <span className="rating-number"> {avgRating}</span>
                         </span>
                         <span>
                             &#8729;
@@ -65,6 +68,7 @@ const RestaurantCard = (
                 <Card.Text className="discountInfo">
                     <FontAwesomeIcon icon="tags" />
                     {aggregatedDiscountInfo.shortDescriptionList[0].meta}
+                    
                 </Card.Text>
             </Card.Body>
         </Card>

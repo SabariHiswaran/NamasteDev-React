@@ -11,6 +11,20 @@ const Header = () => (
                 Food Mania
             </h4>
 
+            <h6
+             className="home-name"
+             > 
+             HOME 
+             </h6>
+
+            <span
+             className="address-text"
+             > 
+             No.15,Sekar street, colony-1st stree,Chennai-600098
+             </span>
+
+             <FontAwesomeIcon icon="chevron-down" style={{ marginRight: "auto" , marginLeft : "15px" , color:"#fc8019" }} />
+
             <ul className="listOfNavs">
                 <li>
 

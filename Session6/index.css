@@ -1,19 +1,38 @@
 .alignNavBar{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .title{
-    margin-right: auto;
-   
+    color: #fc8019;
 }
 
+.home-name{
+    text-decoration: underline;
+    margin:0px 0px 0px 15px !important;
+    
+}
+
+.address-text{
+    width: 200px;
+    display: block;
+    padding-left: 5px;
+    margin-left: 10px;
+    color: #686b78;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+}
 
 .searchbar{
     border:none;
     border-bottom: 2px solid black;
     margin-left: 35px;
+}
+
+.searchbar:focus{
+    outline: none;
 }
 
 .listOfNavs{
@@ -45,14 +64,32 @@
 
 .offerImage > img {
   margin-top: 40px;
+  transition: all 0.5s;
 }
+
+.offerImage > img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
 
 
 /* ------------------Body------------------------- */
 
 .cardImg{
     width: 100%;
+    position: relative;
 }
+
+.promoted-div{
+    position: absolute;
+    top:0;
+    background-color: rgb(58, 60, 65);
+    color: white;
+    /* left: -8px; */
+    border-color: rgb(30, 32, 35) transparent;
+}
+
 
 .cuisinesStyle{
     font-size: 12px;
@@ -63,8 +100,29 @@
 }
 
 .discountInfo {
-    color: brown;
+    color: #8a584b;
     font-size: 14px;
+    font-weight: 400;
+    
+}
+
+.rating-green{
+    background-color: #48c479;
+    color: white;
+}
+
+.rating-orange{
+    background-color: #db7c38;
+    color: white;
+}
+
+.rating-star{
+    margin-left:5px;
+}
+
+.rating-number{
+    font-weight: bold;
+    margin-right:5px;
 }
 
 .restaurant-list{
@@ -82,11 +140,16 @@
 .footerStyle{
     display: flex;
    justify-content: space-between;
- 
+    align-items: center;
 }
 
 .footer-icons{
     display: flex;
     justify-content: space-between;
     font-size: 30px;
+}
+
+.footer-icon-link , .footer-icon-link:hover{
+    color: black;
+   
 }
