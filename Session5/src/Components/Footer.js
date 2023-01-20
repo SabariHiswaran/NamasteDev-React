@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container } from "react-bootstrap";
 
 
-import {faFacebook,faPinterest,faInstagram ,faTwitter} from "@fortawesome/free-brands-svg-icons"
+import {faGithub,faLinkedin} from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => (
    <Container>
@@ -13,13 +13,20 @@ const Footer = () => (
                 Food Mania
             </h4>
 
-        <p> © 2023 Food Mania</p>
+        <p style={{margin:"0px !important"}}> © 2023 Food Mania</p>
 
         <p className="footer-icons">
-        <FontAwesomeIcon icon={faFacebook}  style={{  marginRight: "20px" }} />
-        <FontAwesomeIcon icon={faPinterest}  style={{  marginRight: "20px" }} />
-        <FontAwesomeIcon icon={faInstagram} style={{  marginRight: "20px" }}  />
-        <FontAwesomeIcon icon={faTwitter} style={{  marginRight: "20px" }} />
+
+        <a href="https://github.com/OliverSabari" target="_blank" className="footer-icon-link">
+
+        <FontAwesomeIcon icon={faGithub}  style={{  marginRight: "20px"}} />
+
+        </a>
+        <a href="https://www.linkedin.com/in/sabari-hiswaran-4bba52166/" target="_blank"  className="footer-icon-link">
+
+        <FontAwesomeIcon icon={faLinkedin}  style={{  marginRight: "20px" }} />
+
+        </a>
         </p>
 
         </div>
