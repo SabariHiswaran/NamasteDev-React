@@ -1,9 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container } from "react-bootstrap";
+import { useState } from "react";
+import { Button, Container } from "react-bootstrap";
 
 
 
-const Header = () => (
+const Header = () => {
+
+    const [isLoggedIn , setLoggedIn] =useState(false)
+
+return(
+
     <Container className="mt-3">
         <div className="alignNavBar">
             <h4 className="title">
@@ -45,10 +51,11 @@ const Header = () => (
                     Cart
                 </li>
             </ul>
-
+            <Button variant="dark" onClick={()=> setLoggedIn(!isLoggedIn)}>{isLoggedIn ? "Logout" : "Login"}</Button>
+            
         </div>
     </Container>
 )
-
+}
 
 export default Header;
