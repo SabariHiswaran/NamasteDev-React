@@ -1,0 +1,28 @@
+/* 
+            Header
+                 Logo
+                 NavItems (On the left Side)
+                 Cart
+            Carousel 
+                4 display Items
+            Body 
+                Total number of restaurant
+                Restaurant list
+                   - Cards of Restaurants
+                        Name
+                        Cuisines
+                        Rating 
+                        Delivery Time
+                        Amount
+                        Divider line
+                        Coupon
+                While Hovering Restaurant Cards Display quick view
+            Footer
+                Links
+                Copyrights
+
+            Utils:
+            Font Awesome Icons
+            React Bootstrap
+
+         */

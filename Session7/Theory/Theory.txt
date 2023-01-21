@@ -1,0 +1,48 @@
+
+
+What are the various ways to add images into our app? Explain with code examples?
+
+using import statement (relative path ) and name can be mentioned in image src as JSX.
+
+import logo from './asset/logo.png"
+
+<img src={logo} alt="" />
+
+In CSS:
+
+.Logo {
+  background-image: url(./logo.png);
+}
+
+----------------------------------------------------------------------
+WHat would happen if we do console.log(useState())?
+
+useState is like a normal function which will return the variable and function. This we can destructure and use it.
+
+O/P:
+
+2) [undefined, ƒ]
+
+----------------------------------------------------------------------
+How will useEffect behave if we don't add a dependency array?
+
+If useEffect does not have dependency array then it will run for each render. So, whenever any
+state or props changes , useeffect will also run after render method.
+
+----------------------------------------------------------------------
+What is SPA?
+
+SPA is the Single Page Application. Instead of loading the whole web pages it will only load new Data dynamicaly in same page.
+
+Official Explanation:
+A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default
+method of a web browser loading entire new pages. The goal is faster transitions that make the website feel more like a native app
+
+----------------------------------------------------------------------
+what is difference between Client Side ROuting and Server Side Routing?
+
+For user events when the request went to server and fetch some information and displays it on the page then it is know as Server Side Routing.
+
+For user events when the request does not went to server and fetch the information which are already present on the page is known as client side routing.
+
+----------------------------------------------------------------------
