@@ -47,7 +47,8 @@ JSX returns react elements. React element returns objects and those objects will
 
 Babel and parcel role in JSX
 
-Babel is the one which will go through each line of code and find the JSX. Once it finds the JSX , babel will create the abstract syntax tree and convert the JSX into the React Element.
+Babel is the one which will go through each line of code and find the JSX. Once it finds the JSX , babel will create the abstract syntax tree and
+convert the JSX into the React Element.
 
 babel comes along with the installation of parcel. It is madatory to have Babel if we need to use JSX.
 
@@ -55,10 +56,10 @@ Babel only understands the JSX.
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-Components
+Components 
 
-Everything in webpage is components in react. We can built resuable codes using Components and also it helps to seperate each and every functionality of webpage which provides easy way to
- divide the code and it is easy to troubleshoot.
+Everything in webpage is components in react. We can built resuable codes using Components and also it helps to seperate each and every 
+functionality of webpage which provides easy way to divide the code and it is easy to troubleshoot.
 
 Two types of Component => Class Component and Functional Component 
 
@@ -96,6 +97,23 @@ JSX also helps us to prevent from any attacks when we are fetching any data and 
 
 Role of type attribute in script tag ? What options can i use there ?
 
+The type attribute specifies the type of the script. The type attribute identifies the content between the <script> and </script> tags.
+It has a Default value which is “text/javascript”.
+
+type attribute can be of the following types:
+
+text/javascript : It is the basic standard of writing javascript code inside the <script> tag.
+
+Syntax
+<script type="text/javascript"></script>
+
+text/ecmascript : this value indicates that the script is following the EcmaScript standards.
+
+module: This value tells the browser that the script is a module that can import or export other files or modules inside it.
+
+text/babel : This value indicates that the script is a babel type and required bable to transpile it.
+
+text/typescript: As the name suggest the script is written in TypeScript.
 
 --------------------------------------------------------------------------------------------------------------------------------------
 

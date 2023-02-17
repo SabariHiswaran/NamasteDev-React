@@ -4,10 +4,10 @@ const Shimmer = () => {
 
             {Array(20)
                 .fill("")
-                .map(items => {
+                .map((items, index) => {
                     return (
 
-                        <div className="shimmer-list">
+                        <div className="shimmer-list" key={index}>
                             <div className="shimmer-div"> 
 
                             </div>

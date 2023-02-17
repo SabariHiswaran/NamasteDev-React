@@ -180,3 +180,38 @@
     color: black;
    
 }
+
+/* ---------------------------------Restaurant Menu Details------------------------------------------------------- */
+
+
+/* --------------------------menu Header----------------------- */
+
+.menu-header-container{
+    background-color: #0D0D0D;
+    color: white;
+}
+
+.restaurant-menu-image{
+    width:254px;
+    height: 165px;
+}
+
+.menu-header-div{
+    padding:30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-details-div{
+    display: flex;
+    
+}
+
+.menu-details-rating{
+    display: flex;
+    flex-direction: column;
+    border-right: 0.1px solid white;
+}
+
+

@@ -19,12 +19,13 @@ const Header = () => {
                     Food Mania
                     </Link>
                 </h4>
-
+                <Link to="/">
                 <h6
                     className="home-name"
                 >
                     HOME
                 </h6>
+                </Link>
 
                 <span
                     className="address-text"

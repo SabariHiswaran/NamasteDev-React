@@ -29,8 +29,8 @@ cache which will cache our project and beacuse of that when there are any change
 create the build. This is because of parcel cache.
 
 Official Docs:
-If you restart the dev server, Parcel will only rebuild files that have changed since the last time it ran. Parcel automatically tracks all of the files, configuration,
- plugins, and dev dependencies that are involved in your build, and granularly invalidates the cache when something changes
+If you restart the dev server, Parcel will only rebuild files that have changed since the last time it ran. Parcel automatically tracks all of the files
+, configuration, plugins, and dev dependencies that are involved in your build, and granularly invalidates the cache when something changes
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -78,7 +78,7 @@ at runtime without needing a whole page refresh. This means that application sta
  
  => Minifying the code - When build is created, parcel minify the code. 
  => Compatible with older version of browser - Using the browserlist, we can run the code in older versions of browsers as well.
- => console log cleared - All the console logs in every file will be removed
+ => console log cleared - All the console logs in every file will be removed (This one needs seperate package for console clear)
  => Hot Module Replacement - With use of HMR we dont need to refresh the page and it will keep track of files and whenever anything changes
   it will automatically updates the modules in browser
  => cacheing while development - Due to cacheing development build takes less time to build subsequent changes of the files.
@@ -140,11 +140,15 @@ https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
 
 Read about dif bundlers: vite, webpack, parcel 
 
+-------------------------------------------------------------------------------------------------------------------------------
 Read about: ^ - caret and ~ - tilda 
  
-~version “Approximately equivalent to version”, will update you to all future patch versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <= 1.2.9.
+~version “Approximately equivalent to version”, will update you to all future patch versions, without incrementing the minor version.
+~1.2.3 will use releases from 1.2.3 to <= 1.2.9.
 
-^version “Compatible with version”, will update you to all future minor/patch versions, without incrementing the major version. ^2.3.4 will use releases from 2.3.4 to <= 2.9.9.
+^version “Compatible with version”, will update you to all future minor/patch versions, without incrementing the major version.
+^2.3.4 will use releases from 2.3.4 to <= 2.9.9.
 
+-------------------------------------------------------------------------------------------------------------------------------
 Read about Script types in html (MDN Docs)
 

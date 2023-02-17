@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Card } from "react-bootstrap"
 import { RES_IMAGE_URL } from "../Config"
 
+import {Link} from 'react-router-dom'
 
 const RestaurantCard = (
     {
+        id,
         cloudinaryImageId,
         name,
         cuisines,
@@ -19,7 +21,7 @@ const RestaurantCard = (
 
     return (
 
-
+        <Link to={`/RestaurantDetails/${id}`}>
         <Card style={{ width: '260px' , border: "none" }}>
             
             <Card.Img
@@ -72,7 +74,7 @@ const RestaurantCard = (
                 </Card.Text>
             </Card.Body>
         </Card>
-
+        </Link>
 
     )
 }

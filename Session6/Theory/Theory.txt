@@ -35,7 +35,8 @@ Since the modules are decoupled from each other, it is easier to build and deplo
 ------------------------------------------------------------------------------------------------------------------
 why do we need a useEffect hook?
 
-Useeffect hook can handle the side effects of the app that cannot be handled by react. There are few things that react cannot take charge like calling an api, localstorage etc....
+Useeffect hook can handle the side effects of the app that cannot be handled by react. There are few things that react cannot take charge like calling an 
+api, localstorage etc....
 
 So, useEffect hook can be used to handle any side effects. Useeffect will run after render method and it will 
 always run based on the dependency array that has been given in second parameter.
@@ -49,17 +50,18 @@ loading page => rendering the page (100ms) => API call (300ms) => updating the U
 ------------------------------------------------------------------------------------------------------------------
 What is optional Chaining?
 
-Suppose if the data we are trying to access is not present inside the program or calling an api and accessing some particular data in that api which is not present after
-some point of time then our application will crash with some error. So, to avoid this we can use optional chaining which will avoid exwecuting the full programing if the data is not present and\
-this will not crash our app.
+Suppose if the data we are trying to access is not present inside the program or calling an api and accessing some particular data in that api
+which is not present after some point of time then our application will crash with some error. So, to avoid this we can use optional chaining
+which will avoid exwecuting the full programing if the data is not present and this will not crash our app.
 
 console.log(person?.data?.name)  //If this data is not present then it will print undefined instead of throwing error.
 
 ------------------------------------------------------------------------------------------------------------------
 what is shimmer UI ?
 
-Shimmer UI is the ui which can be displayed during the time of api call. Because while calling the data from api , it will take some time to render that in page so during that time
-instead of keeping the ui in white screen we can implement the shimmer UI which will enhance the user experience.
+Shimmer UI is the ui which can be displayed during the time of api call. Because while calling the data from api ,
+it will take some time to render that in page so during that time instead of keeping the ui in white screen we can implement the 
+shimmer UI which will enhance the user experience.
 
 SHimmer UI will just display the design of the card/data that is going to be present once data is received from server.
 

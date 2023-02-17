@@ -97,7 +97,7 @@ const Body = () => {
                         <Shimmer />
                         :
                         filteredRes?.map(restaurant => (
-                            <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+                            <RestaurantCard {...restaurant.data} key={restaurant.data.id} id={restaurant.data.id} />
                         ))
                 }
 

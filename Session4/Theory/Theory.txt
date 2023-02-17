@@ -38,9 +38,9 @@ which helps us to prevent to add unwanted div's or any tags as parent. As JSX ex
 -------------------------------------------------------------------------------------------------------------------------
 What is virtual DOm ?
 
-Virtual DOM is the representation of DOM. This is not React, virtual DOM is software engineering concept. React uses this concept, that is why React is fast.
-Virtual DOM is the tree contains nodes which represents the original DOM. It finds the specific place in tree whenever the changes are occured and then using this
- information Real DOM will be updated.
+Virtual DOM is the representation of DOM. This is not React, virtual DOM is software engineering concept. React uses this concept, that is why React
+is fast. Virtual DOM is the tree contains nodes which represents the original DOM. It finds the specific place in tree whenever the changes are 
+occured and then using this information Real DOM will be updated.
 -------------------------------------------------------------------------------------------------------------------------
 
 what is reconcialation in react?
@@ -59,9 +59,10 @@ Fiber is the new reconciliation engine in React 16. Its main goal is to enable i
 -------------------------------------------------------------------------------------------------------------------------
 Why we need keys in react ? WHen do we need keys in react?
 
-if we have a list of items inside li and then it is dynamic, whenever new data added react confuses which is new Data so it end up with rerendering whole list.
-To avoid this we can provide key for each list uniquely. So, next time when new data added React will exactly know which list was added newly and it will
-add only that element and avoid rerending whole list.
+if we have a list of items inside li and then it is dynamic, whenever new data added react confuses which is new Data so it end up with rerendering
+whole list.
+To avoid this we can provide key for each list uniquely. So, next time when new data added React will exactly know which list was added newly and
+it will add only that element and avoid rerending whole list.
 
 eg:
 <ul>
@@ -100,7 +101,8 @@ destructure the props on the fly like {abc} then we can simple call it as abc in
 -------------------------------------------------------------------------------------------------------------------------
 what is config driven UI ?(Plus point in system design interview)
 
-Making our UI as dynamic is know as Config Driven UI. In the real world application, we should control our UI with config. Config comes from the backend API.
+Making our UI as dynamic is know as Config Driven UI. In the real world application, we should control our UI with config.
+Config comes from the backend API.
 
 So, whenever the config changes as per the data provided by backend API, our application also will be displayed based on that config.
 

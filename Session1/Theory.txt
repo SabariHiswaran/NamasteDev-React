@@ -46,7 +46,7 @@ A: The development build is used - as the name suggests - for development reason
  in those builds. The production build, on the other hand, runs in production mode which means this is the code running on your client's machine.
 
 Q: What is async and defer?
-A: Async - means execute code when it is downloaded and do not block DOM construction during downloading process.
+A: Async - means execute code when script is downloaded and do not block DOM construction during downloading process.
  async scripts load in the background and run when ready. The DOM and other scripts don’t wait for them, and they don’t wait for anything.
 
 Defer - means execute code after it's downloaded and browser finished DOM construction and rendering process.

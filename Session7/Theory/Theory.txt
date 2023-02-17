@@ -35,7 +35,8 @@ What is SPA?
 SPA is the Single Page Application. Instead of loading the whole web pages it will only load new Data dynamicaly in same page.
 
 Official Explanation:
-A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default
+A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current
+web page with new data from the web server, instead of the default
 method of a web browser loading entire new pages. The goal is faster transitions that make the website feel more like a native app
 
 ----------------------------------------------------------------------
