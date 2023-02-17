@@ -1,12 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+
 import { Button, Container } from "react-bootstrap";
 
 import { Link } from 'react-router-dom'
 
 const Header = () => {
 
-    const [isLoggedIn, setLoggedIn] = useState(false)
 
     return (
 
@@ -58,8 +57,9 @@ const Header = () => {
                         Cart
                     </li>
                 </ul>
-                <Button variant="dark" onClick={() => setLoggedIn(!isLoggedIn)}>{isLoggedIn ? "Logout" : "Login"}</Button>
-
+                <Link to="/Login">
+                <Button variant="dark">Login </Button>
+                </Link>
             </div>
         </Container>
     )

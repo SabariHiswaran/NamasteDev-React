@@ -16,6 +16,7 @@ import Error from "./Components/Error"
 import About from "./Components/About"
 import Offers from "./Components/Offers"
 import RestaurantMenu from "./Components/RestaurantMenu"
+import Loginpage from "./Components/Loginpage"
 
 const AppLayout = () => {
     return (
@@ -49,6 +50,9 @@ const appRouter = createBrowserRouter([
             {
                 path:"/RestaurantDetails/:id",
                 element:<RestaurantMenu/>
+            },{
+                path:"/Login",
+                element: <Loginpage />
             }
         ]
     },
