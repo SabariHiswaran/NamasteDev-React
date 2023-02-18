@@ -1,0 +1,88 @@
+
+
+How do you create Nested Routes react router dom configuration?
+
+Create Children for the path where nested routes needed and Outlet should be implemented in the page where the nested route components will be displayed.
+
+Note : Implemented Nested route in the About Page Component .
+
+
+-----------------------------------------------------------------------------------------------------------
+
+Read about CreateHashRouter , CreateMemoryRouter from React router docs
+
+Reference : https://reactrouter.com/en/main
+
+createHashRouter:
+
+This router is useful if you are unable to configure your web server to direct all traffic to your React Router application. 
+Instead of using normal URLs, it will use the hash (#) portion of the URL to manage the "application URL".
+
+Other than that, it is functionally the same as createBrowserRouter.
+
+Note:
+Using hash URLs is not recommended.
+
+createMemoryRouter:
+
+Instead of using the browsers history a memory router manages it's own history stack in memory. It's primarily
+useful for testing and component development tools like Storybook, but can also be used for running React Router in any non-browser environment.
+
+----------------------------------------------------------------------------------------------------------------
+
+what is the order of lifecycle methods calls in class based components
+
+
+Constructor => Render => ComponentDidMount => If there is any change in state and while rerender => render => ComponentDidUpdate => 
+If user leaves the page => ComponentwillUnMount
+
+
+-------------------------------------------------------------------------------------------------------------
+
+why do we use componentDidMount()?
+
+The componentDidMount() method allows us to execute the React code when the component is already placed in the DOM (Document Object Model).
+This method is called during the Mounting phase of the React Life-cycle i.e after the component is rendered.
+
+ComponentDidMount commonly used to make an API Call. It will run during the Initial render. Constructor => render => ComponentDidMount 
+
+To avoid page load and to consume the time react renders whatever available first. So, it executes render first which will print whatever avaialble
+first and after that api call will be made via componentDidMount and data will be printed.
+
+---------------------------------------------------------------------------------------------------------------
+
+Why do we use ComponentWillUnMount()? Show with Examples
+
+The componentWillUnmount() method allows us to execute the React code when the component gets destroyed or unmounted from the DOM (Document Object Model).
+This method is called during the Unmounting phase of the React Life-cycle i.e before the component gets unmounted.
+
+ComponentwillUnmount commonly used to perform clean up operations.
+
+Example:
+
+If setTimeOut is present then when user leaves that component, setTimeOut should be destroyed. 
+So, to clean up the setTimeout we have to use ComponentwillUnMount.
+
+------------------------------------------------------------------------------------------------------------------
+
+
+(Research) Why do we use super(props) in constructor ?
+
+super(props) is required to have access to props inside the constructor. Without super(props)
+ whatever the props that has been passed cannot be accessed inside constructor method.
+
+https://www.youtube.com/watch?v=1psHq9rgApg
+------------------------------------------------------------------------------------------------------------
+
+(Research) Why cant we have the callback function of useEffect async ?
+
+Because React's useEffect hook expects a cleanup function returned from it which is called when the component unmounts. 
+Using an async function here will cause a bug as the cleanup function will never get called.
+
+https://ultimatecourses.com/blog/using-async-await-inside-react-use-effect-hook#:~:text=Why%3F,function%20will%20never%20get%20called.
+
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
