@@ -1,0 +1,66 @@
+
+
+When and Why do we need lazy() ?
+
+lazy() method is for lazy loading the components. We can use it for the components which user visit occasionally. Those components don't need to load 
+at initial time as user will not access it often. 
+
+By using this lazy() we can reduce the initial load time, which will increase the speed of the website.
+
+Whatever the component that has been lazily loaded, those component files will be fetched only while it is called instead of initial rendering.
+
+
+----------------------------------------------------------------------------------------
+
+
+What is suspense ?
+
+Components that are lazily loaded will be taken some time to download its files and its dependencies and getting loaded into the page. So, during that
+time using  suspense we can have a nice UI like loading indicator etc...
+
+Official docs:
+
+<Suspense> lets you display a fallback until its children have finished loading.
+
+React suspense is a ReactJS technique that enables data fetching libraries to inform React when asynchronous data for a component is still being fetched. 
+It suspends the component from rendering until the required data is obtained and provides a fallback UI during the fetch duration.
+--------------------------------------------------------------------------------------------
+
+Why we got this error ? A component suspended while responding to the synchronous input.THis will cause the UI to be replaced with a loading indicator.
+To fix, update that suspend should be wrapped with startTransition? How does suspense fix this error?
+
+
+--------------------------------------------------------------------------------------
+
+
+Advantages and disadvantages of using this code splitting pattern ?
+
+Advantage:
+
+Allowing a user's browser to download the entire app once so that they can navigate seamlessly without needing another HTTP request.
+Browsers don't need to require or import any other file because they are all in the bundle.
+
+Disadvantage:
+
+The only drawback about code splitting is that you can only use it in client side rendering. It won't work 
+during server side rendering when it comes to React. This is the reason why the React team recommends using loadable components for code 
+splitting in the server
+
+
+---------------------------------------------------------------------------------------
+
+When do we and why do we need suspense ?
+
+
+Components that are lazily loaded will be taken some time to download its files and its dependencies and getting loaded into the page. So, during that
+time using  suspense we can have a nice UI like loading indicator etc...
+
+Official docs:
+
+<Suspense> lets you display a fallback until its children have finished loading.
+
+React suspense is a ReactJS technique that enables data fetching libraries to inform React when asynchronous data for a component is still being fetched. 
+It suspends the component from rendering until the required data is obtained and provides a fallback UI during the fetch duration.
+
+
+--------------------------------------------------------------------------------------------------
