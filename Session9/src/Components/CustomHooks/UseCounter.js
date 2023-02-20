@@ -6,6 +6,7 @@ const UseCounter = () => {
 
     const [count,setCount] = useState(0)
 
+    const [decrementCount,setDecrementCount] = useState(0)
     const handleIncrement = () => {
         return (
             setCount(prevCount => prevCount + 5)
@@ -14,14 +15,14 @@ const UseCounter = () => {
 
     const handleDecrement = () => {
         return (
-            setCount(prevCount => prevCount - 1)
+            setDecrementCount(prevCount => prevCount - 1)
         )
     }
 
 
     return (
 
-       [count,handleIncrement,handleDecrement]
+       [count,decrementCount,handleIncrement,handleDecrement]
 
     )
 }

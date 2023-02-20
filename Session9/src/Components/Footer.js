@@ -1,11 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 
 
 import {faGithub,faLinkedin} from "@fortawesome/free-brands-svg-icons"
+import UseCounter from "./CustomHooks/UseCounter";
 
-const Footer = () => (
+const Footer = () => {
+
+    const [count,decrementCount,handleIncrement,handleDecrement] = UseCounter()
+
+    return (
    <Container>
+    <Button onClick={handleDecrement}> Counter </Button>
+    <p> {decrementCount}</p>
         <hr/>
         <div className="footerStyle">
         <h4 className="footer-title">
@@ -31,7 +38,7 @@ const Footer = () => (
 
         </div>
     </Container>
-)
+)}
 
 
 export default Footer

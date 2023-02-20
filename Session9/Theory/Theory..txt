@@ -30,6 +30,9 @@ Why we got this error ? A component suspended while responding to the synchronou
 To fix, update that suspend should be wrapped with startTransition? How does suspense fix this error?
 
 
+This error will come if there is no suspense with fallback UI. Initially React will take few seconds to bring the lazy loaded page bundle into webpage.
+During that time we need to use the suspense with fallback UI for any designs or loading indicator while bundle is getting ready.
+
 --------------------------------------------------------------------------------------
 
 

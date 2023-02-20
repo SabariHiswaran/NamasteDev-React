@@ -3,23 +3,19 @@ import { useEffect, useState } from "react"
 import { Container } from "react-bootstrap"
 
 import { RES_IMAGE_URL } from "../Config"
+import UseRestaurantMenu from "./CustomHooks/UseRestaurantMenu"
+import Shimmer from "./Shimmer"
 
 const MenuHeader = ({ restaurantId }) => {
 
+    const [menuDetails] = UseRestaurantMenu(restaurantId)
 
-    const [menuDetails, setMenuDetails] = useState([])
-
-    useEffect(() => {
-        getMenuData()
-    }, [])
-
-    async function getMenuData() {
-        const menuData = await fetch(`https://www.swiggy.com/dapi/menu/v4/full?lat=12.938585&lng=80.134426&menuId=${restaurantId}`)
-        const menu = await menuData.json()
-        setMenuDetails(menu)
-    }
-
-    return (
+    return menuDetails.length ===0 ?
+    
+    <Shimmer/>
+    :
+    
+    (
 
         <Container fluid className="menu-header-container mt-4">
             <Container >

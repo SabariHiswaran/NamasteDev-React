@@ -3,7 +3,7 @@ import UseCounter from "./CustomHooks/UseCounter"
 
 const Offers = () => {
 
-    const [count,handleIncrement,handleDecrement] = UseCounter()
+    const [count,decrementCount,handleIncrement,handleDecrement] = UseCounter()
 
     return (
         <>
@@ -15,11 +15,11 @@ const Offers = () => {
             <Button onClick={handleIncrement}> Count </Button>
             <p> {count}</p>
         </div>
-
+ 
         <div>
             <h3> Decrease counter by 1 </h3>
             <Button onClick={handleDecrement}> Count </Button>
-            <p> {count}</p>
+            <p> {decrementCount}</p>
         </div>
         </>
     )
