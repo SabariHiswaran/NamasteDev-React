@@ -14,12 +14,58 @@ Different ways of writing css :
 
 How do we configure tailwind?
 
+For each framework/Build tools, there are different steps to configure the tailwind,
+
+Below are the steps for parcel to configure the tailwind,
+
+=>Install tailwind css using below lines,
+
+npm install -D tailwindcss postcss
+
+postcss is the one that compiles tailwind and transforms it to static css.
+
+=> Initialize tailwind css
+
+npx tailwindcss init
+
+=> Configure postcss 
+
+create new file ".postcssrc" and put the below configuration,
+{
+  "plugins": {
+    "tailwindcss": {}
+  }
+}
+
+=>Configure template path inside the tailwind.config.js:
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+=> In index.css add the tailwind directive to css with below lines,
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 --------------------------------------------------------------------------------------------------------
 
 In tailwing.config.js what does all the keys mean ( content,theme,extends,plugins)?
 
 
+
 ----------------------------------------------------------------------------------------------------
 
 Why do we have .postcssrc file ?
+
+
+
+
