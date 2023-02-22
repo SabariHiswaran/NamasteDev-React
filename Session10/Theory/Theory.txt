@@ -1,0 +1,25 @@
+
+
+Explore all the ways of writing css.
+
+Different ways of writing css :
+1) Normal Native Css 
+2) SCSS / SASS
+3) Inline Css 
+4) Component Libraries  -  Material UI , Base UI, Ant, Chakra ,Bootstrap
+7) Styled Component
+6) Tailwind CSS framework 
+
+-----------------------------------------------------------------------------------------------------------
+
+How do we configure tailwind?
+
+
+--------------------------------------------------------------------------------------------------------
+
+In tailwing.config.js what does all the keys mean ( content,theme,extends,plugins)?
+
+
+----------------------------------------------------------------------------------------------------
+
+Why do we have .postcssrc file ?
