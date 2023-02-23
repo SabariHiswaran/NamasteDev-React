@@ -60,12 +60,24 @@ module.exports = {
 
 In tailwing.config.js what does all the keys mean ( content,theme,extends,plugins)?
 
+tailwind.config.js is the file which will be used to customize the defalut configuration. There are diferent class and properties which we can modify or add.
 
+Content : inside content property we need to specify the paths of HTML,js etc.. files which is using the tailwind class names.
 
+Theme : We can set the themes by customizing color, fontsize,bordersize etcc... which will totally override the default theme that is provided by tailwind.
+
+Extends : Unlike theme, extend will just extend(add) new properties to the exisiting tailwind properties.
+
+Plugins : The plugins section allows you to register plugins with Tailwind that can be used to generate extra utilities, components,
+base styles, or custom variants.
+
+Refer for more : https://tailwindcss.com/docs/configuration
 ----------------------------------------------------------------------------------------------------
 
 Why do we have .postcssrc file ?
 
 
+.postcssrc file configuraiton tells bundler(like parcel) that in our project we have tailwind class names so while bundling things up compile the tailwind 
+css and transfer it into normal css. This is the use of .postcssrc file.
 
-
+--------------------------------------------------------------------------------------------------------
