@@ -5,18 +5,23 @@ import { IMAGE_URL } from "../Config"
 const CarouselComponent = () => {
 
     return (
-        <Container className="mt-3" fluid style={{ backgroundColor: "black", height: "340px" }}>
-            <Container className="offerImage">
+        <Container className="mt-3 bg-black h-80" fluid>
+
+            <Container className="p-4 d-flex flex-row justify-evenly items-center transition-all ">
+
                 <img
                     width="260"
                     height="260"
                     src={`${IMAGE_URL}ef3i0k1ilhdsistcykog`}
+                    className="hover:cursor-pointer translate-1 duration-300"
                 />
+
                 <img
                     width="260"
                     height="260"
                     src={`${IMAGE_URL}awurei8ypqkafoqay9ym`}
                 />
+
                 <img
                     width="260"
                     height="260"

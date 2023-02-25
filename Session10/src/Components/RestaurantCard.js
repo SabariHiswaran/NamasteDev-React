@@ -21,8 +21,8 @@ const RestaurantCard = (
 
     return (
 
-        <Link to={`/RestaurantDetails/${id}`}>
-        <Card style={{ width: '260px' , border: "none" }}>
+        <Link to={`/RestaurantDetails/${id}`} className="text-black">
+        <Card  className="w-64 border-none ml-10 mt-5">
             
             <Card.Img
                 className="cardImg"

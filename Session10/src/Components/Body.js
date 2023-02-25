@@ -47,7 +47,7 @@ const Body = () => {
             <input
                 type="text"
                 placeholder="&#128269; Search"
-                className="searchbar"
+                className="border-b-2 border-b-black-900"
                 value={searchText}
                 onChange={
                     (e) => {
@@ -89,7 +89,7 @@ const Body = () => {
                 }>
                 {errorMsg}
             </p>
-            <div className="restaurant-list">
+            <div className="d-flex flex-wrap">
 
                 {
                     (filteredRes?.length === 0 && errorMsg?.length ===0)
