@@ -21,31 +21,31 @@ const RestaurantCard = (
 
     return (
 
-        <Link to={`/RestaurantDetails/${id}`} className="text-black">
-        <Card  className="w-64 border-none ml-10 mt-5">
+        <Link to={`/RestaurantDetails/${id}`} className="text-black no-underline ">
+        <Card  className="w-64 border-0 ml-10 mt-5">
             
             <Card.Img
-                className="cardImg"
+                className="relative"
                 variant="top"
                 src={RES_IMAGE_URL + cloudinaryImageId}
                 // src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${RES_IMAGE_URL}`}
                 alt="SShyderabad"
             />
 
-           { promoted ? <div className="promoted-div"> PROMOTED </div> : null }
+           { promoted ? <div className="absolute bg-black text-white"> PROMOTED </div> : null }
 
             <Card.Body>
-                <Card.Title>
+                <Card.Text className="text-base font-bold">
                     {name}
-                </Card.Title>
+                </Card.Text>
 
-                <Card.Text className="cuisinesStyle">
+                <Card.Text className="text-xs">
                     {cuisines.join(", ")}
                 </Card.Text>
 
-                    <div className="ratingStyle" style={{ display: "flex", justifyContent: "space-between " }}>
+                    <div className="d-flex justify-between items-center text-xs">
 
-                        <span className={ avgRating >= 4.0 ? "rating-green" : "rating-orange"}>
+                        <span className={ avgRating >= 4.0 ? "bg-rating-green text-white pl-1.5 pr-1.5" : "bg-rating-orange text-white pl-1.5 pr-1.5"}>
                             <FontAwesomeIcon icon="star" className="rating-star" />
                            <span className="rating-number"> {avgRating}</span>
                         </span>
@@ -67,7 +67,7 @@ const RestaurantCard = (
 
                 <hr />
 
-                <Card.Text className="discountInfo">
+                <Card.Text className="text-sm text-offer-color">
                     <FontAwesomeIcon icon="tags" />
                     {aggregatedDiscountInfo.shortDescriptionList[0].meta}
                     

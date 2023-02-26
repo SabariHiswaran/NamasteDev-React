@@ -3,18 +3,14 @@ import { Button, Container } from "react-bootstrap";
 
 
 import {faGithub,faLinkedin} from "@fortawesome/free-brands-svg-icons"
-import UseCounter from "./CustomHooks/UseCounter";
 
 const Footer = () => {
 
-    const [count,decrementCount,handleIncrement,handleDecrement] = UseCounter()
 
     return (
    <Container>
-    <Button onClick={handleDecrement}> Counter </Button>
-    <p> {decrementCount}</p>
         <hr/>
-        <div className="footerStyle">
+        <div className="d-flex justify-between"> 
         <h4 className="footer-title">
                 <FontAwesomeIcon icon="hamburger" style={{  marginRight: "10px" }} />
                 Food Mania
@@ -24,12 +20,12 @@ const Footer = () => {
 
         <p className="footer-icons">
 
-        <a href="https://github.com/OliverSabari" target="_blank" className="footer-icon-link">
+        <a href="https://github.com/OliverSabari" target="_blank" className="no-underline text-black">
 
         <FontAwesomeIcon icon={faGithub}  style={{  marginRight: "20px"}} />
 
         </a>
-        <a href="https://www.linkedin.com/in/sabari-hiswaran-4bba52166/" target="_blank"  className="footer-icon-link">
+        <a href="https://www.linkedin.com/in/sabari-hiswaran-4bba52166/" target="_blank"  className="no-underline text-black">
 
         <FontAwesomeIcon icon={faLinkedin}  style={{  marginRight: "20px" }} />
 

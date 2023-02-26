@@ -17,17 +17,17 @@ const MenuHeader = ({ restaurantId }) => {
     
     (
 
-        <Container fluid className="menu-header-container mt-4">
+        <Container fluid className="bg-black h-64 mt-4">
             <Container >
-                <div className="menu-header-div">
+                <div className="d-flex justify-between items-center h-64 text-white">
                     <div>
                         <img
                             src={`${RES_IMAGE_URL}${menuDetails?.data?.cloudinaryImageId}`}
                             alt="restaurant-image"
-                            className="restaurant-menu-image"
+                            className="h-40"
                         />
                     </div>
-                    <div>
+                    <div className="d-flex flex-col items-start justify-start ">
                         <h1>
                             {menuDetails?.data?.name}
                         </h1>   
@@ -40,7 +40,7 @@ const MenuHeader = ({ restaurantId }) => {
                         {`${menuDetails?.data?.locality} ${menuDetails?.data?.area}`}
                         </p>
 
-                        <div className="menu-details-div">
+                        <div className="d-flex ">
 
                             <div className="menu-details-rating">
 
@@ -74,7 +74,7 @@ const MenuHeader = ({ restaurantId }) => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="border-2 border-white p-3">
                         <p>
                         {menuDetails?.data?.aggregatedDiscountInfo.descriptionList[0].meta}
                         </p>
