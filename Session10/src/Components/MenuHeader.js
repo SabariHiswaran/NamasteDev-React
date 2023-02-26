@@ -27,7 +27,7 @@ const MenuHeader = ({ restaurantId }) => {
                             className="h-40"
                         />
                     </div>
-                    <div className="d-flex flex-col items-start justify-start ">
+                    <div className="d-flex flex-col mr-auto ml-20">
                         <h1>
                             {menuDetails?.data?.name}
                         </h1>   
@@ -74,7 +74,12 @@ const MenuHeader = ({ restaurantId }) => {
                         </div>
                     </div>
 
-                    <div className="border-2 border-white p-3">
+                    <div className="border-2 border-white p-3 relative">
+                      
+                        <p  className="bg-black absolute -top-6 -left-2 p-2">
+                           OFFER
+                        </p>
+                    
                         <p>
                         {menuDetails?.data?.aggregatedDiscountInfo.descriptionList[0].meta}
                         </p>

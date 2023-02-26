@@ -5,9 +5,9 @@ import { IMAGE_URL } from "../Config"
 const CarouselComponent = () => {
 
     return (
-        <Container className="mt-3 bg-black h-80" fluid>
+        <Container className="mt-3 bg-black h-80 " fluid>
 
-            <Container className="p-4 d-flex flex-row justify-evenly items-center transition-all ">
+            <Container className="p-4 d-flex flex-row justify-evenly items-center transition-all sm:bg-green">
 
                 <img
                     width="260"

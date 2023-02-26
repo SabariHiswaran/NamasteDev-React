@@ -10,7 +10,7 @@ const Footer = () => {
     return (
    <Container>
         <hr/>
-        <div className="d-flex justify-between"> 
+        <div className="d-flex justify-between sm:d-flex  sm:flex-col sm:items-center"> 
         <h4 className="footer-title">
                 <FontAwesomeIcon icon="hamburger" style={{  marginRight: "10px" }} />
                 Food Mania
