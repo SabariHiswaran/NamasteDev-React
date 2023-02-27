@@ -1,0 +1,33 @@
+
+What is prop drilling?
+
+Suppose we have 4 components Parent, child, grandchild, grand grand child 
+
+if grand grand child component need the  data that is present in Parent component, then Parent should pass 
+the data as props to child and then child to grand Child and then grand child to grand grand child component.This is known as props drilling.
+
+------------------------------------------------------------
+
+what is lifting the state up?
+
+If one component need to change the data to their siblings component, then this is not possible. So, to do this we need to lift the state up to the 
+Parent Component. Once the state is in the parent component then  parent will control all the child components.
+
+Code example is in Instamart component.
+
+--------------------------------------------------------------
+
+what is context provider and context consumer?
+
+Using Context provider , component can provide the its data to the value prop. Provider should be wrapped for the components that needs to use context values.
+
+Using context consumer, class based components can receive the context values. UseContext can be used as context consumer in functional based components.
+
+Code example is in App layout and utils folder(context file)
+
+----------------------------------------------------------------
+
+If you don't pass the value to the provider does it take the default value?
+
+
+-------------------------------------------------------------------
