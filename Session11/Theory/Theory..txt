@@ -19,7 +19,9 @@ Code example is in Instamart component.
 
 what is context provider and context consumer?
 
-Using Context provider , component can provide the its data to the value prop. Provider should be wrapped for the components that needs to use context values.
+Using Context provider , component can provide the its data to the value prop. Provider should be wrapped for the 
+components that needs to use context values. It will override the default Value of the context.
+
 
 Using context consumer, class based components can receive the context values. UseContext can be used as context consumer in functional based components.
 
@@ -29,5 +31,8 @@ Code example is in App layout and utils folder(context file)
 
 If you don't pass the value to the provider does it take the default value?
 
+If there is no COntext provider then it will use the default value which is created while using createContext.
+
+If Context.Provider wrapped without value prop then react will throw error and value cannot be empty.
 
 -------------------------------------------------------------------

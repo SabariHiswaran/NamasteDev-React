@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
 
 import { Button, Container } from "react-bootstrap";
 
 import { Link } from 'react-router-dom'
+import LoginContext from "./utils/LoginContext";
 
 const Header = () => {
 
+    const {user} = useContext(LoginContext)
 
     return (
 
@@ -48,10 +51,14 @@ const Header = () => {
                             About-us
                         </Link>
                     </li>
+                    
                     <li>
                         <FontAwesomeIcon icon="user" style={{ marginRight: "10px" }} />
-                        Profile
+                        <Link to="/Instamart">
+                        Instamart
+                        </Link>
                     </li>
+
                     <li>
                         <FontAwesomeIcon icon="shopping-cart" style={{ marginRight: "10px" }} />
                         Cart
@@ -60,6 +67,7 @@ const Header = () => {
                 <Link to="/Login">
                 <Button variant="dark">Login </Button>
                 </Link>
+                <h1> {user.name}</h1>
             </div>
         </Container>
     )

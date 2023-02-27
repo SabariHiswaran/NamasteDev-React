@@ -18,18 +18,27 @@ import Error from "./Components/Error"
 import RestaurantMenu from "./Components/RestaurantMenu"
 import Loginpage from "./Components/Loginpage"
 import Shimmer from "./Components/Shimmer"
+import Instamart from "./Components/Instamart"
+import LoginContext from "./Components/utils/LoginContext"
 
 
 const About = lazy(() => import("./Components/About"))
 const Offers = lazy(() => import("./Components/Offers"))
 
+
+
 const AppLayout = () => {
+
+
+
     return (
-        <>
+        <LoginContext.Provider value={  { user : {name : "Oliver" , email:"oliver@gmail.com"}}}>
             <Header />
             <Outlet/>
+            <LoginContext.Provider value={ {user : {name :"Sab" , email : "Sabb@email.com"}}}>
             <Footer/>
-        </>
+            </LoginContext.Provider>
+        </LoginContext.Provider>
     )
 }
 
@@ -51,6 +60,10 @@ const appRouter = createBrowserRouter([
             {
                 path:"/Offers",
                 element:<Suspense fallback={<Shimmer/>}><Offers/></Suspense>
+            },
+            {
+                 path: "/Instamart",
+                 element:<Instamart/>
             },
             {
                 path:"/RestaurantDetails/:id",

@@ -4,6 +4,8 @@ import { Card } from "react-bootstrap"
 import { RES_IMAGE_URL } from "../Config"
 
 import {Link} from 'react-router-dom'
+import { useContext } from "react"
+import LoginContext from "./utils/LoginContext"
 
 const RestaurantCard = (
     {
@@ -18,6 +20,8 @@ const RestaurantCard = (
         promoted
     }
     ) => {
+
+    const {user} = useContext(LoginContext)
 
     return (
 
@@ -64,7 +68,8 @@ const RestaurantCard = (
 
                     </div>
 
-
+                    <p> {user.name }</p>
+                    <p> {user.email}</p>
                 <hr />
 
                 <Card.Text className="discountInfo">

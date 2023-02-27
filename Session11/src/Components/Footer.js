@@ -4,11 +4,13 @@ import { Button, Container } from "react-bootstrap";
 
 import {faGithub,faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import UseCounter from "./CustomHooks/UseCounter";
+import { useContext } from "react";
+import LoginContext from "./utils/LoginContext";
 
 const Footer = () => {
 
     const [count,decrementCount,handleIncrement,handleDecrement] = UseCounter()
-
+    const {user} = useContext(LoginContext)
     return (
    <Container>
     <Button onClick={handleDecrement}> Counter </Button>
@@ -17,7 +19,7 @@ const Footer = () => {
         <div className="footerStyle">
         <h4 className="footer-title">
                 <FontAwesomeIcon icon="hamburger" style={{  marginRight: "10px" }} />
-                Food Mania
+                Food Mania - Created By {user.name}
             </h4>
 
         <p style={{margin:"0px !important"}}> © 2023 Food Mania</p>

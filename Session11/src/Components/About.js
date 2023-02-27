@@ -24,6 +24,7 @@ import { Link, Outlet } from 'react-router-dom'
 import React from 'react'
 import About1 from "./Aboutone";
 import About2 from "./Abouttwo";
+import LoginContext from "./utils/LoginContext";
 
 class About extends React.Component {
     constructor(props) {
@@ -43,12 +44,17 @@ class About extends React.Component {
     render() {
         console.log("Component rendered")
         return (
-            <>
+            <LoginContext.Consumer>
+                {(value) =>( 
+                    <>
+                <h1>{value.user.name} </h1>
                 <p> About Us Page </p>
                 <About1 Counternumber={3} />
 
                 <About2/>
-            </>
+                </>
+               ) }
+                </LoginContext.Consumer>
         )
     }
 
