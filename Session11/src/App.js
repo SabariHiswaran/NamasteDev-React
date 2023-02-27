@@ -20,6 +20,7 @@ import Loginpage from "./Components/Loginpage"
 import Shimmer from "./Components/Shimmer"
 import Instamart from "./Components/Instamart"
 import LoginContext from "./Components/utils/LoginContext"
+import { useState } from "react"
 
 
 const About = lazy(() => import("./Components/About"))
@@ -29,10 +30,10 @@ const Offers = lazy(() => import("./Components/Offers"))
 
 const AppLayout = () => {
 
-
+    const [user,setUserDetails] = useState( {name : "Oliver" , email:"oliver@gmail.com"})
 
     return (
-        <LoginContext.Provider value={  { user : {name : "Oliver" , email:"oliver@gmail.com"}}}>
+        <LoginContext.Provider value={ {user:user,setUserDetails :  setUserDetails }}>
             <Header />
             <Outlet/>
             <LoginContext.Provider value={ {user : {name :"Sab" , email : "Sabb@email.com"}}}>

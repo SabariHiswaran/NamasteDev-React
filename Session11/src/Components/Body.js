@@ -3,6 +3,8 @@ import RestaurantCard from "./RestaurantCard"
 
 import { useEffect, useState } from "react"
 import Shimmer from "./Shimmer"
+import { useContext } from "react"
+import LoginContext from "./utils/LoginContext"
 
 const Body = () => {
 
@@ -25,6 +27,8 @@ const Body = () => {
         }
 
     }
+
+    const {user,setUserDetails} = useContext(LoginContext)
 
     useEffect(() => {
         getApiData()
@@ -82,6 +86,10 @@ const Body = () => {
             >
                 Search
             </Button>
+
+            <p>Change user Name in context : </p>
+            <input type="text" value={user.name} onChange={(e) => setUserDetails({ ...user, name : e.target.value} )} />
+
             <hr />
             <p
                 style={
