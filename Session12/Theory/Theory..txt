@@ -1,24 +1,61 @@
 
 useContext vs Redux :
 
+useContext and Redux, both are used to share data across the components irrespective of where the components is placed.
 
+When it comes to Large application, useContext becomes more complex and due to this our application will lost the readability and maintainability.
+If we have multiple context, it becomes more difficult to manage.
+
+Redux is very usefull for large application as it maintains the seprate store for managing the data.
+Redux can handle multiple slices of our application.
+
+Chrome Results:
+
+useContext                                                                               Redux
+
+useContext is a hook.	                                             Redux is a state management library.
+It is used to share data.	                                             It is used to manage data and state.
+Changes are made with the Context value.	                                             Changes are made with pure functions i.e. reducers.
+We can change the state in it.	                                             The state is read-only. We cannot change them directly.
+It re-renders all components whenever there is any update in the provider’s value prop.	            It only re-render the updated components.
+It is better to use with small applications.	                                             It is perfect for larger applications. 
+It is easy to understand and requires less code.	                                             It is quite complex to understand.
 --------------------------------------------------------------
 
 Advantage of using redux toolkit over redux
 
+Redux Toolkit reduces the complexity as redux is more complex to implement.
+
+Official docs:
+Redux Toolkit builds in our suggested best practices, simplifies most Redux tasks, prevents common mistakes, and makes it easier to write
+Redux applications. 
+If you are writing any Redux logic today, you should be using Redux Toolkit to write that code!
 
 -------------------------------------------------------------
 
 Explain dispatcher:
 
+disptacher is used to dispatch the actions.
+
+const dispatch = useDispatch()
+
+useDispatch() - This hook returns a reference to the dispatch function from the Redux store. You may use it to dispatch actions as needed.
+
+Dispatch is used to send actions into our redux store and is the only way we can affect the store from within a component. 
+This only works with function components.
+
 -------------------------------------------------------------
 
 Explain Reducer :
 
+Reducer is the function which updates the slice of our redux store. There will be a multiple reducers fuctions for the different
+types of actions. when dispatcher dispatch the action then it will execute the respective reducer function and updates the particular slice of our
+redux store.
 
 ------------------------------------------------------------------
 
 Explain slice :
+
 
 
 -------------------------------------------------------------------
