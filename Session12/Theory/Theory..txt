@@ -63,12 +63,37 @@ typically defined together in a single file. The name comes from splitting up th
 
 Explain selector :
 
+If we need to access the data/state from the redux store then the  component should be subscribed to the store so that it can automatically update whenver 
+the state changes. So, useSelector is the hook which helps to subscribe our component to the redux store.
+
+const cartItems = useSelector((store) => store.cart.items )
+
+useSelector is the hook which accepts the function as argument and by default it has store as param and from the store we can select the state and save it .
 
 
 ------------------------------------------------------------------
 
 Explain createslice and the configuration it takes : 
 
+As the name tells, createSlice creates the slice or particular feature of our app. Redux would have multiple slices.
+
+Config:
+
+const cartSlice = createSlice({
+    name: "cart",
+    initialState : {
+        items : []
+    },
+    addItem : (state,action) => {
+        state.items.push(action.payload)
+    }
+})
+
+Things that we need to put it inside createSlice as objects,
+
+1) Name of the cart
+2)initial state of that slices
+3)we can have one or muliple actions and declare the respective reducer function which updates the slice state of our redux store.
 
 
 -----------------------------------------------------------------
