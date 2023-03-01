@@ -22,6 +22,8 @@ import Instamart from "./Components/Instamart"
 import LoginContext from "./Components/utils/LoginContext"
 import { useState } from "react"
 import Cart from "./Components/Cart"
+import { Provider } from "react-redux"
+import store from "./Components/Store"
 
 
 const About = lazy(() => import("./Components/About"))
@@ -34,6 +36,7 @@ const AppLayout = () => {
     const [user,setUserDetails] = useState( {name : "Oliver" , email:"oliver@gmail.com"})
 
     return (
+        <Provider store={store}>
         <LoginContext.Provider value={ {user:user,setUserDetails :  setUserDetails }}>
             <Header />
             <Outlet/>
@@ -41,6 +44,7 @@ const AppLayout = () => {
             <Footer/>
             </LoginContext.Provider>
         </LoginContext.Provider>
+        </Provider>
     )
 }
 

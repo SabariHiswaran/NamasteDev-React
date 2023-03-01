@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
 
 import { Button, Container } from "react-bootstrap";
+import { useSelector } from "react-redux/es/exports";
 
 import { Link } from 'react-router-dom'
 import LoginContext from "./utils/LoginContext";
@@ -9,6 +10,8 @@ import LoginContext from "./utils/LoginContext";
 const Header = () => {
 
     const {user} = useContext(LoginContext)
+
+    const itemCount = useSelector((store) => store.cart.items)
 
     return (
 
@@ -62,7 +65,7 @@ const Header = () => {
                     <li>
                         <FontAwesomeIcon icon="shopping-cart" style={{ marginRight: "10px" }} />
                         <Link to="/cart">
-                        Cart
+                        Cart - {itemCount.length}
                         </Link>
                     </li>
                 </ul>
