@@ -21,6 +21,7 @@ import Shimmer from "./Components/Shimmer"
 import Instamart from "./Components/Instamart"
 import LoginContext from "./Components/utils/LoginContext"
 import { useState } from "react"
+import Cart from "./Components/Cart"
 
 
 const About = lazy(() => import("./Components/About"))
@@ -65,6 +66,10 @@ const appRouter = createBrowserRouter([
             {
                  path: "/Instamart",
                  element:<Instamart/>
+            },
+            {
+                path:"/cart",
+                element:<Cart/>
             },
             {
                 path:"/RestaurantDetails/:id",

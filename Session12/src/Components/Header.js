@@ -61,7 +61,9 @@ const Header = () => {
 
                     <li>
                         <FontAwesomeIcon icon="shopping-cart" style={{ marginRight: "10px" }} />
+                        <Link to="/cart">
                         Cart
+                        </Link>
                     </li>
                 </ul>
                 <Link to="/Login">
