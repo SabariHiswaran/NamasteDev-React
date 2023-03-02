@@ -3,7 +3,7 @@ import { useSelector } from "react-redux/es/hooks/useSelector"
 
 const Cart = () => {
 
-const selector = useSelector((store) => store.cart.items)
+const selector = useSelector((store) => store.cartS.items)
 
     return (
 <>

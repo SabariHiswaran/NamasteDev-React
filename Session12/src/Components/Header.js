@@ -11,7 +11,7 @@ const Header = () => {
 
     const {user} = useContext(LoginContext)
 
-    const itemCount = useSelector((store) => store.cart.items)
+    const itemCount = useSelector((store) => store.cartS.items)
 
     return (
 

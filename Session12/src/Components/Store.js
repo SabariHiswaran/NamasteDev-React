@@ -3,7 +3,7 @@ import cartSlice from "./utils/cartSlice"
 
 const store = configureStore({
      reducer : {
-        cart : cartSlice
+        cartS : cartSlice
      }
 })
 
