@@ -2,21 +2,37 @@
 
 What are different types of testing ? 
 
+Types of testing are,
+
+1) Unit Testing
+2) Integration testing
+3) Functional Testing 
+4) End to End Testing
+5) Acceptance Testing
+6) Performance Testing 
+7) Smoke Testing 
 
 ------------------------------------------------------------------
 
 What is Enzyme ?
 
+Enzyme testing is only developed and meant to test the react components. It is developed by Airbnb.
 
 ------------------------------------------------------------------
 
 Enzyme vs React Testing Library
 
+Enzyme allows you to access the internal workings of your components. You can read and set the state, and you can 
+mock children to make tests run faster.
 
+On the other hand, react-testing-library doesn't give you any access to the implementation details. It renders the components and
+provides utility methods to interact with them. The idea is that you should communicate with your application in the
+same way a user would. So rather than set the state of a component you reproduce the actions a user would do to reach that state.
 ------------------------------------------------------------------
 
 WHat is Jest and why do we use it ?
 
+Jest is the javascript testing framework. It is not only for react, we can use jest for various projects like babel,typescript,angular,react,vue,node.
 
 
 -------------------------------------------------------------------
