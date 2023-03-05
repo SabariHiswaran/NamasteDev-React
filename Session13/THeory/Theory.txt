@@ -34,5 +34,6 @@ WHat is Jest and why do we use it ?
 
 Jest is the javascript testing framework. It is not only for react, we can use jest for various projects like babel,typescript,angular,react,vue,node.
 
-
+Jest is also widely preferred for automated browser testing, making it one of the most popular Javascript testing frameworks.
+It also provides a blended package of an assertion library, a test runner, and a built-in mocking library.
 -------------------------------------------------------------------
